@@ -200,7 +200,11 @@ animation: shake 0.5s ease;
 }
 
 .votes-grid {
-  display: grid;
+  display:grid ;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap:1.5rem;
 }

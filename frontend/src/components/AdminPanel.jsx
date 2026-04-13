@@ -3,7 +3,10 @@ import React, { useState } from 'react'
 const AdminPanel = ({ votes, setVotes, showNotification }) => {
   const [newoption, setNewOption] = useState("");
   const handleAddOption = async () => {
-    if (!newoption?.trim()) return;
+    if (!newoption?.trim()){
+       showNotification("Please enter an option first!", "error");
+    return;
+    };
 
     try {
       const response = await fetch(
