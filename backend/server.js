@@ -32,6 +32,10 @@ connectDatabase();
 // middlewares
 app.use(cors());
 app.use(express.json());
+// modify
+app.get("/", (req, res) => {
+  res.send("Voting API is running 🚀");
+});
 
 // apis;
 
